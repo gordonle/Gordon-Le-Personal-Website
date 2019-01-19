@@ -1,0 +1,101 @@
+
+
+[data-style-container~="about"] {
+    [data-style-description] {
+        p {
+            margin: 5px 15px 5px 0;
+            a {
+                color: black;
+            }
+        }
+        td {
+            margin: 5px;
+        }
+        tr {
+            display: flex; 
+            .mobileDesc { flex-direction: column }
+            .desktopDesc { flex-direction: row }
+            justify-content: flex-start;
+            margin: 10px 0;
+            width: 100%;
+            height: 100%;
+        }
+        [data-style-subtitle] {
+            display: inline;
+            padding: 2px 8px;
+            background: palegoldenrod;
+        }
+        [data-style-subtitle~="hometown"] { background: palegoldenrod }
+        [data-style-subtitle~="education"] { background: lightblue }
+        [data-style-subtitle~="skills"] { background: lightpink }
+        [data-style-subtitle~="interests"] { background: lavender }
+    }
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5vh;
+        [data-style-picture-wall] {
+            margin: 20px 0;
+            max-width: 80vw;
+            [data-style-picture] {
+                height: 24vw;
+                width: 18vw;
+            }
+        }
+    }
+    .desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5vh;
+        [data-style-picture-wall] {
+            min-width: 330px;
+            [data-style-picture] {
+                height: 100px;
+                width: 75px;
+            }
+        }
+    }
+    [data-style-picture-wall] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        [data-style-picture-column] {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            [data-style-picture] {
+                display: block;
+                background: white;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: 500ms;
+                &:hover {
+                    box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+                    transition: 500ms;
+                }
+            }
+            #one { background-image: url("../../../assets/cuba1.JPG") }
+            #two { background-image: url("../../../assets/boyfriendday.jpg") }
+            #three { background-image: url("../../../assets/babypic.jpg") }
+            #four { background-image: url("../../../assets/prom.JPG") }
+            #five { background-image: url("../../../assets/parents.jpg") }
+            #six { background-image: url("../../../assets/team.jpg") }
+            #seven { background-image: url("../../../assets/wynnie.jpg") }
+            #eight { background-image: url("../../../assets/ultimate.jpg") }
+            #nine { background-image: url("../../../assets/sky.jpg") }
+            #ten { background-image: url("../../../assets/acapella.jpg") }
+            #eleven { background-image: url("../../../assets/cuba2.jpg") }
+            #twelve { background-image: url("../../../assets/tbfam.jpg") }
+
+            [data-style-picture~="even"] {
+                margin-bottom: 10px;
+            }
+            [data-style-picture~="odd"] {
+                margin-top: 10px;
+            }
+        }
+    }
+}

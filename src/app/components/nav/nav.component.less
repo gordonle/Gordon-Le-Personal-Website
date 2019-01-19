@@ -1,0 +1,131 @@
+@Hover: black;
+
+.menuButton {
+    height: 13px;
+    width: 13px;
+    z-index: 100;
+    border: 1px solid black;
+    background: white;
+    opacity: 0.75;
+    border-radius: 50%;
+    transition: 500ms;
+    &:hover {
+        cursor: pointer;
+        border: 1px solid white;
+        background: black;
+        transition: 500ms;
+    }
+}
+
+[data-style-platform~="desktop"] {
+    width: 100%;
+    position: relative;
+
+    .menuButton {
+        right: 10px;
+        top: 8px;
+        position: absolute;
+    }
+
+    .menu {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        z-index: 0;
+        a {
+            color: lightgray;
+            padding: 5px 10px;
+            text-decoration: none;
+            transition: 200ms;
+            &:hover {
+                color: @Hover;
+                transition: 200ms;
+                text-decoration: overline;
+            }
+        }
+    }
+
+    .here {
+        z-index: 10;
+        right: 30px;
+        visibility: visible;
+        opacity: 1;
+        transition: 500ms;
+    }
+    
+    .notHere {
+        z-index: 0;
+        right: 0px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 500ms;  
+    }
+
+    [data-style-nav-menu] {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+}
+
+[data-style-platform~="mobile"] {
+    width: 100%;
+    .menuButton {
+        right: 50px;
+        position: fixed;
+    }
+
+    .menu {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        background: white;
+        opacity: 0.97;
+        margin: 0;
+        [data-style-mobile-nav] {
+            height: 100%;
+            text-align: center;
+            margin: 12vh 0;
+            .smallRect {
+                height: 1px;
+                width: 60px;
+                background: black;
+                margin: 0 auto;
+            }
+            [data-style-links] {
+                display: flex;
+                flex-direction: column;
+                height: 65vh;
+                justify-content: center;
+                a {
+                    color: black;
+                    text-decoration: none;
+                    margin: 10px 0;
+                }
+            }
+            [data-style-footer] {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+                bottom: 0;
+            }
+        }
+    }
+
+    .here {
+        z-index: 99;
+        visibility: visible;
+        top: 0;
+        transition: 500ms;
+    }
+
+    .notHere {
+        z-index: -1;
+        visibility: hidden;
+        top: 100vh;
+        transition: 500ms;
+    }
+}

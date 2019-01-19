@@ -1,0 +1,45 @@
+[data-style-container~="blogEntry"] {
+    animation-delay: 100ms;
+}
+
+.rectangle {
+    height: 10px;
+    margin: 20px 0;
+    animation: growRect 1500ms;
+    animation-delay: 100ms;
+    max-width: 15%;
+}
+
+@keyframes growRect {
+    from {width: 0%};
+    to {width: 15%};
+}
+
+[data-style-blog-content~="desktop"] {
+    margin: 0 8vw;
+}
+
+[data-style-blog-content] {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+    // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    img {
+        display: block;
+        height: 300px;
+        width: 200px;
+        margin: 10px auto;
+        border-radius: 2px;
+    }
+    [subtitle] {
+        margin: 20px 0 10px;
+    }
+    [quote] {
+        text-align: center;
+        width: 80%;
+        font-style: italic bold;
+        font-size: 1.2em;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,69 @@
+[data-style-container~="home"]{
+    animation-delay: 50ms;
+    .desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 5vh;
+        [data-style-banner] {
+            width: 23%;
+            height: 53vh;
+            position: relative;
+            transition: 500ms;
+            top: 0;
+            &:hover {
+                top: 15px;
+                transition: 500ms;
+            }
+            h3 {
+                margin: 10px 15px;
+            }
+        }
+        
+    }
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 5vh;
+        [data-style-banner] {
+            width: 100%;
+            height: 25vh;
+            margin-bottom: 2vh;
+            transition: 500ms;
+            h3 {
+                margin: 20vh 15px 0;
+            }
+        }
+    }
+    [data-style-banner] {
+        text-align: right;
+        letter-spacing: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: 500ms;
+        &:hover {
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: 500ms;
+        }
+    }
+    [data-style-banner~="me"] {
+        background-image: url("../../../assets/headshot2.jpg");
+    }
+    [data-style-banner~="blog"] {
+        color: white;
+        background-position: 75%;
+        background-image: url("../../../assets/foods.jpg");
+    }
+    [data-style-banner~="experience"] {
+        background-image: url("../../../assets/flay_lay.jpg");
+    }
+    [data-style-banner~="projects"] {
+        background-image: url("../../../assets/desk.jpg");
+    }
+}

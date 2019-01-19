@@ -1,0 +1,60 @@
+<div data-style-container="about">
+    <div data-style-title>
+        <h1>gordon le</h1>
+        <h3 (click)="newMessage()" style="cursor: pointer; user-select: none">{{ messages[message] }}</h3>
+    </div>
+    <div [ngClass]="isMobile ? 'mobile' : 'desktop'">
+        <div data-style-description>
+            <p>Hello 👋 My name's Gordon, pleasure to meet you. Here's my brief summary:</p>
+            <table>
+                <tr data-style-info [ngClass]="isMobile ? 'mobileDesc' : 'desktopDesc'">
+                    <td><div data-style-subtitle="hometown">Hometown</div></td>
+                    <td>Ottawa, Ontario 🍁</td> 
+                </tr>
+                <tr data-style-info [ngClass]="isMobile ? 'mobileDesc' : 'desktopDesc'">
+                    <td><div data-style-subtitle="education">Education</div></td>
+                    <td>2A Computer Science, University of Waterloo</td> 
+                </tr>
+                <tr data-style-info [ngClass]="isMobile ? 'mobileDesc' : 'desktopDesc'">
+                    <td><div data-style-subtitle="skills">Skills</div></td>
+                    <td>Angular, C, C++, JavaScript, Python, Java, Git</td> 
+                </tr>
+                <tr data-style-info [ngClass]="isMobile ? 'mobileDesc' : 'desktopDesc'">
+                    <td><div data-style-subtitle="interests">Interests</div></td>
+                    <td>A Cappella, Ultimate Frisbee, Athletics</td> 
+                </tr>
+            </table> 
+            <p>Creating and discovering is what excites me. At the moment, I'm seeking a <b>Summer 2019 Internship</b>,
+                where I can continue to grow and develop my skills as a Full-Stack Developer.</p>
+            <p>These days, you can find me <a href="https://www.instagram.com/chef_go_r_d/" target="_blank">cooking</a>,
+                <a href="https://www.youtube.com/channel/UCq4JT5D7WYhkigmbVkBvUYA" target="_blank">singing</a>,
+                or writing in my <a routerLink="/blog">blog</a>. If you're interested in chatting,
+                come reach out to me on <a href="https://linkedin.com/in/gordonle/" target="_blank">LinkedIn</a>!</p>
+        </div>
+        <div data-style-picture-wall>
+            <div data-style-picture-column>
+                <!-- for lazy loading, use img then set a background image -->
+                <!-- load images in a G patters?? :O -->
+                <div data-style-picture="even" id="one"></div>
+                <div data-style-picture="even" id="two"></div>
+                <div data-style-picture="even" id="three"></div>
+            </div>
+            <div data-style-picture-column>
+                <div data-style-picture="odd" id="four"></div>
+                <div data-style-picture="odd" id="five"></div>
+                <div data-style-picture="odd" id="six"></div>
+            </div>
+            <div data-style-picture-column>
+                <div data-style-picture="even" id="seven"></div>
+                <div data-style-picture="even" id="eight"></div>
+                <div data-style-picture="even" id="nine"></div>
+            </div>
+            <div data-style-picture-column>
+                <div data-style-picture="odd" id="ten"></div>
+                <div data-style-picture="odd" id="eleven"></div>
+                <div data-style-picture="odd" id="twelve"></div>
+            </div>
+        </div>
+    </div>
+    <app-footer-links></app-footer-links>
+</div>

@@ -1,0 +1,21 @@
+<div data-style-container="home">
+    <div data-style-title>
+        <h1>hey there</h1>
+        <h3>click something to learn more about me!</h3>
+    </div>
+    <div [ngClass]="isMobile ? 'mobile' : 'desktop'">
+        <div data-style-banner="me" routerLink="me" (click)="close()">
+            <h3>me.</h3>
+        </div>
+        <div data-style-banner="projects" routerLink="projects" (click)="close()">
+            <h3>projects.</h3>
+        </div>
+        <div data-style-banner="experience" routerLink="" (click)="close()">
+            <h3>exp.</h3>
+        </div>
+        <div data-style-banner="blog" routerLink="blog" (click)="close()">
+            <h3>blog.</h3>
+        </div>
+    </div>
+    <app-footer-links></app-footer-links>
+</div>

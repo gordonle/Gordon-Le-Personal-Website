@@ -1,0 +1,28 @@
+[data-style-container="blog"] {
+    [data-style-entry] {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 5vh;
+        width: 100%;
+        height: 100%;
+        .sideRectangle {
+            display: block;
+            transition: 250ms;
+            top: 3px;
+            position: relative;
+            width: 5px;
+            margin: 0 10px 0 0;
+        }
+        .titles {
+            height: 100%;
+        }
+        &:hover {
+            cursor: pointer;
+            .sideRectangle{
+                width: 10px;
+                transition: 250ms;
+            }
+        }
+    }
+}

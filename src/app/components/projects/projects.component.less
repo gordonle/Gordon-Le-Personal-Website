@@ -1,0 +1,28 @@
+[data-style-projects] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 30px;
+    [data-style-project] {
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 333px;
+        background: lighten(lightgray, 15%);
+        transition: 100ms;
+        &:hover {
+            box-shadow: 0 0 5px rgba(0,0,0,0.25);
+            transition: 100ms;
+        }
+    }
+    [data-style-project~="mobile"] {
+        display: flex;
+        max-width: 70vw;
+        margin: 2vh 0;
+    }
+    [data-style-project~="desktop"] {
+        margin: 15px 2vw;
+    }
+}

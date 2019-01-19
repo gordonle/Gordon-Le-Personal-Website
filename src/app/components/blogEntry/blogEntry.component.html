@@ -1,0 +1,26 @@
+<div data-style-container="blogEntry">
+  <ng-container *ngIf="isBlog('acappella'); else elseif1">
+    <div data-style-title>
+        <h1>The Water Boys</h1>
+        A year of unforgettable memories <br>
+        <i style="font-size: 13px;">Published November 16, 2018</i>
+        <div class="rectangle blue"></div>
+    </div>
+    <div [attr.data-style-blog-content]="isMobile ? 'mobile' : 'desktop'">
+      <h3>Some Context</h3> 
+      <p><u>A Cappella</u> is a form of art that revolves around creating music with a single instrument: our voices. Oddly enough, the University 
+        of Waterloo has the largest and most competitive post-secondary A Cappella club in all of Canada! 
+        
+      </p>
+      <p quote><i>I am running out of mealplan funds.</i></p>
+      <p>more memories and text hahahahah wow how much can i talk about??</p>
+
+      <img src="../../../assets/acapella.jpg">
+    </div>
+  </ng-container>
+  <ng-template #elseif1>
+    <ng-container *ngIf="isBlog('entry'); else else1">entry</ng-container>
+  </ng-template>
+  <ng-template #else1>This blog does not exist!</ng-template>
+  <app-footer-links></app-footer-links>
+</div>

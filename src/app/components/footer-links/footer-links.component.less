@@ -1,0 +1,21 @@
+@Hover: black;
+
+[data-style-footer-links] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    margin: 50px 0 30px;
+    width: 100%;
+    i {
+        text-decoration: none;
+        color: lightgray;
+        margin: 0 10px;
+        transition: 500ms;
+        &:hover {
+            color: @Hover;
+            transition: 500ms;
+            cursor: pointer;
+        }
+    }
+}
