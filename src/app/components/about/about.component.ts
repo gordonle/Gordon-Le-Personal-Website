@@ -26,7 +26,10 @@ export class AboutComponent implements OnInit {
                                 "not tall but not short",
                                 "sorts his sock drawer",
                                 "dislikes olives",
-                                "scored a goal in soccer once"];
+                                "scored a goal in soccer once",
+                                "really likes noodles",
+                                "is looking for new cool pants to wear",
+                              ];
   private msgTimer = setTimeout(()=>{}, 0);
   
   constructor(private respServ: ResponsiveService,
@@ -47,11 +50,11 @@ export class AboutComponent implements OnInit {
   }
 
   public newMessage = () => {
-    let oldVal = this.message;
-    while (oldVal == this.message) this.message = Math.floor((Math.random() * (this.messages.length - 1)));
+    const oldVal = this.message;
+    while (oldVal === this.message) this.message = Math.floor((Math.random() * (this.messages.length - 1)));
     clearTimeout(this.msgTimer);
     this.msgTimer = setTimeout(() => {
       this.newMessage();
-    }, 10000);
+    }, 5000);
   }
 }

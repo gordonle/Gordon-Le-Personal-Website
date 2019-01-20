@@ -7,7 +7,7 @@
             <a *ngIf="show('')" routerLink="/" (click)="switchTabs()">home.</a>
             <a *ngIf="show('me')" routerLink="/me" (click)="switchTabs()">me.</a>
             <a *ngIf="show('projects')" routerLink="/projects" (click)="switchTabs()">projects.</a>
-            <a *ngIf="show('exp')" routerLink="" (click)="switchTabs()">exp.</a>
+            <a *ngIf="show('experience')" routerLink="/experience" (click)="switchTabs()">experience.</a>
             <a *ngIf="show('blog')" routerLink="/blog" (click)="switchTabs()">blog.</a>
         </div>
     </div>
@@ -21,7 +21,7 @@
                     <a routerLink="" (click)="switchTabs()">home.</a>
                     <a routerLink="me" (click)="switchTabs()">me.</a>
                     <a routerLink="projects" (click)="switchTabs()">projects.</a>
-                    <a routerLink="" (click)="switchTabs()">exp.</a>
+                    <a routerLink="experience" (click)="switchTabs()">experience.</a>
                     <a routerLink="blog" (click)="switchTabs()">blog.</a>
                 </div>
                 <app-footer-links></app-footer-links>

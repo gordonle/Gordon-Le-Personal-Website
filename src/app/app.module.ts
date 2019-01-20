@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { AboutComponent } from "./components/about/about.component";
 import { AppComponent } from "./app.component";
 import { BlogComponent } from "./components/blog/blog.component";
+import { ExperienceComponent } from './components/experience/experience.component';
 import { FooterLinksComponent } from './components/footer-links/footer-links.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from "./components/nav/nav.component";
@@ -21,11 +22,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AboutComponent,
     AppComponent,
     BlogComponent,
-    NavComponent,
-    ProjectsComponent,
-    HomeComponent,
-    FooterLinksComponent,
     BlogEntryComponent,
+    ExperienceComponent,
+    FooterLinksComponent,
+    HomeComponent,
+    ProjectsComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

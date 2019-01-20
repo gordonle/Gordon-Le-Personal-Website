@@ -1,0 +1,27 @@
+<div data-style-container="experience">
+  <div data-style-title>
+      <h1>experience</h1>
+      <h3>here's some stuff i've done</h3>
+  </div>
+  <div data-style-experiences>
+    <div [attr.data-style-experience]="isMobile ? 'mobile' : 'desktop'"
+         [attr.data-style-open]="isShowing(0) ? 'open' : 'closed'"
+         style="background-image: url(../../../assets/imagine-communications.JPG)"
+         (click)="toggleDescription(0)">
+      <div>
+          <h1>Imagine Communications</h1>
+          <h4>Full Stack Web Developer - Nexio Product Suite</h4>
+      </div>
+      <div desc *ngIf="isShowing(0)">
+        <div><i tech class="fab fa-angular"></i><i tech class="fab fa-js-square"></i><i tech class="fab fa-bitbucket"></i></div>
+        Working in an Agile environment, I migrated key components of our codebase
+        from AngularJS to Angular6+. I also spearheaded the design and creation of new features, such as customizable audio
+        visualizers, a centralized keypress shortcut service, and a media marker/segment management system. These additions,
+        along with many UI revisions, were geared towards an optimized Data Asset Management suite.
+      </div>
+      <i arrow *ngIf="!isShowing(0)" class="fas fa-chevron-down"></i>
+      <i arrow *ngIf="isShowing(0)" class="fas fa-chevron-up"></i>
+    </div>
+  </div>
+  <app-footer-links></app-footer-links>
+</div>
