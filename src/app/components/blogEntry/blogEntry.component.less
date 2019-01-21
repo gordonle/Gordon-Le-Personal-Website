@@ -1,7 +1,11 @@
 [data-style-container~="blogEntry"] {
     animation-delay: 100ms;
 }
+[data-style-blog-content~="desktop"] {
+    margin: 0 8vw;
+}
 
+/* Growing Rectangle */
 .rectangle {
     height: 10px;
     margin: 20px 0;
@@ -9,32 +13,21 @@
     animation-delay: 100ms;
     max-width: 15%;
 }
-
 @keyframes growRect {
     from {width: 0%};
     to {width: 15%};
 }
 
-[data-style-blog-content~="desktop"] {
-    margin: 0 8vw;
-}
-
+/* Content */
 [data-style-blog-content] {
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 30px;
-    // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    img {
-        display: block;
-        height: 300px;
-        width: 200px;
-        margin: 10px auto;
-        border-radius: 2px;
-    }
-    [subtitle] {
-        margin: 20px 0 10px;
-    }
+    line-height: 1.5;
+    /* Text Styles*/
+    p { margin-top: 0; }
+    h2 { margin: 1em 0 0.5em; }
     [quote] {
         text-align: center;
         width: 80%;
@@ -42,4 +35,25 @@
         font-size: 1.2em;
         margin: 0 auto;
     }
+    /* Images */
+    [picture] {
+        margin-top: 20px;
+        img {
+            display: block;
+            height: auto;
+            width: auto;
+            margin: 10px auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        /* Image Caption */
+        p {
+            color: grey;
+            font-size: 0.8em;
+            font-style: italic;
+            text-align: center;
+            margin: auto 0 20px;
+        }
+    }    
 }
+
