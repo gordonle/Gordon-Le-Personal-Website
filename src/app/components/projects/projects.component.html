@@ -4,12 +4,41 @@
       <h3>here's some stuff i've built</h3>
   </div>
   <div data-style-projects>
-    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"><b>Personal Website</b></div>
-    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"><b>coming soon...</b></div>
-    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"><b>coming soon...</b></div>
-    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"><b>coming soon...</b></div>
-    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"><b>coming soon...</b></div>
-    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"><b>coming soon...</b></div>
+    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"
+         [attr.data-style-side]="isMobile ? 'left' : ''">
+      <img src="../../../assets/biquadris-left.png"/>
+      <div>
+        <h1>Biquadris</h1>
+        <div><span class="icon cpp"></span><i tech class="fab fa-git"></i></div>
+        <div desc>Created as part of CS246: Object-Oriented Software Development, this project was
+          done in C++, using GitLabs for version control. Due to copyright, the source code is not 
+          available online.
+        </div>
+      </div>
+    </div>
+    <div [attr.data-style-project]="isMobile ? 'mobile' : 'desktop'"
+         [attr.data-style-side]="isMobile ? 'right' : ''">
+      <div style="display: flex; flex-direction: column">
+        <h1>Personal Website</h1>
+        <div>
+          <i tech class="fab fa-angular"></i>
+          <i tech class="fab fa-js-square"></i>
+          <i tech class="fab fa-html5"></i>
+          <i tech class="fab fa-css3-alt"></i>
+          <i tech class="fab fa-less"></i>
+        </div>
+        <div desc>Designed a modern and sleek design, using Angular and CSS Preprocessor Less. 
+          Learn about me, some projects I've done, experiences I've lived, and read my blog!
+          <br/>
+        </div>
+        <div class="button">
+          <a target="_blank" href="https://github.com/gordonle/Gordon-Le-Personal-Website">
+            View on <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <img src="../../../assets/personal-website-right.png"/>
+    </div>
   </div>
   <app-footer-links></app-footer-links>
 </div>

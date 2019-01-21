@@ -3,26 +3,89 @@
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 30px;
+    [data-style-side~="left"] { flex-direction: column;  }
+    [data-style-side~="right"] { flex-direction: column-reverse; }
     [data-style-project] {
-        font-family: 'Courier New', Courier, monospace;
+        box-sizing: border-box;
+        padding: 35px 40px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 250px;
-        height: 333px;
-        background: lighten(lightgray, 15%);
+        justify-content: space-between;
         transition: 100ms;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
+        [desc] {
+            padding: 10px;
+            font-size: 0.85em;
+            display: block;
+        }
+        img {
+            max-height: 264px;
+            max-width: 500px;
+            margin: auto 0;
+        }
+        .button {
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: lighten(lightgrey, 10%);
+            border-radius: 10px;
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
         &:hover {
-            box-shadow: 0 0 5px rgba(0,0,0,0.25);
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
             transition: 100ms;
+            transform: scale(1.01);
         }
     }
     [data-style-project~="mobile"] {
-        display: flex;
-        max-width: 70vw;
+        width: 65vw;
         margin: 2vh 0;
+        padding: 35px 25px;
+        text-align: left;
+        h1 { font-size: 1.5em; }
+        h4 { font-size: 0.90em; }
+        img {
+            max-height: 100px;
+            max-width: 189px;
+            margin: 0 auto 20px;
+            // background: center/cover no-repeat;
+        }
+        [tech] {
+            font-size: 1em;
+            margin: 10px 0 5px 5px;
+        }
+        .icon { 
+            transform: scale(0.7);
+            margin: -3px;
+        }
     }
     [data-style-project~="desktop"] {
-        margin: 15px 2vw;
+        flex-direction: row;
+        width: 80%;
+        margin: 15px 1vw;
+        min-height: 50vh;
+        img {
+            max-height: 159px;
+            max-width: 301px;
+        }
+        [tech] {
+            font-size: 1.4em;
+            margin: 10px 0 5px 10px;
+        }
     }
+}
+
+.icon {
+    background: center/cover no-repeat;
+    height: 19px;
+    width: 17px;
+    display: inline-block;
+    filter: grayscale(100%);
+}
+.cpp {
+    background-image: url("../../../assets/cpp_logo.png");
 }

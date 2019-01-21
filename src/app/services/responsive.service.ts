@@ -20,10 +20,10 @@ export class ResponsiveService {
 
     public checkWidth = () => {
         let width = window.innerWidth;
-        if (width <= 730) {
+        if (width <= 786) {
             this.screenwidth = "sm";
             this.onMobileChange(true);
-        } else if (width > 730 && width <= 992) {
+        } else if (width > 786 && width <= 992) {
             this.screenwidth = "md";
             this.onMobileChange(false);
         } else {
