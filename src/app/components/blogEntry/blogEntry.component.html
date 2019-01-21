@@ -3,7 +3,7 @@
     <div data-style-title>
         <h1>The Water Boys</h1>
         A year of unforgettable memories <br>
-        <i style="font-size: 13px;">Published January 10, 2018</i>
+        <i style="font-size: 13px;">Published August 21, 2018</i>
         <div class="rectangle blue"></div>
     </div>
     <div [attr.data-style-blog-content]="isMobile ? 'mobile' : 'desktop'">
@@ -11,8 +11,8 @@
       <p>If you've never heard of <b><i>A Cappella</i></b>, I highly recommend listening to 
         <a class="highlight blue" target="_blank" href="https://www.youtube.com/watch?v=tffl66nJPWY">this</a>. Essentially, it's 
         just singing without instruments. In this blog I'll tell you about my audition process, and about the time I've spent on The
-        Water Boys, from competing <i>internationally</i> to becoming Vice President 👀 Sit back relax and enjoy my mediocre storytelling! 
-        <i>Let's dive in</i> 💦💦
+        Water Boys, including how we competed <i>internationally</i> against some of the best teams in the world 👀 Sit back relax 
+        and enjoy my mediocre storytelling! <i>Let's dive in</i> 💦💦
       </p>
       <div picture>
           <img src="../../../assets/icca_sf2018_1.jpg"/>
@@ -130,16 +130,10 @@
       <p>Thank you Yamen, Jake, Alex, Nick, Zack, DGuo, Angelo, Rock, Flint Ross, Wes, Paknys, Lumibao, Ravindu, Hayes and Ryan for an 
         unforgettable term. We all poured blood, sweat and tears into putting on the best show possible, and you should be proud. 
       </p>
-
-
-      <!-- <h2>First term as Vice President</h2>
-      <p>Last term, I was elected as Vice President for the Fall 2018 term
-
-      </p> -->
     </div>
   </ng-container>
   <ng-template #elseif1>
-    <ng-container *ngIf="isBlog('entry'); else else1">entry</ng-container>
+    <ng-container *ngIf="isBlog('easteregg'); else else1">ha nice gottem</ng-container>
   </ng-template>
   <ng-template #else1>This blog does not exist!</ng-template>
   <app-footer-links></app-footer-links>
