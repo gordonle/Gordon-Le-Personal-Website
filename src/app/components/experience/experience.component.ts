@@ -9,10 +9,8 @@ import { NavService } from "../../services/nav.service";
   styleUrls: ['./experience.component.less']
 })
 export class ExperienceComponent implements OnInit {
-  public isMobile: boolean; 
-  private showDescription: { [id: number] : boolean } = {
-    0: false,
-  };
+  public isMobile: boolean;
+  private showDescription: number;
 
   constructor(private router: Router,
               private respServ: ResponsiveService,
@@ -31,11 +29,15 @@ export class ExperienceComponent implements OnInit {
   }
 
   public toggleDescription = (id: number) => {
-    this.showDescription[id] = !this.showDescription[id];
+    if (this.showDescription == id) {
+      this.showDescription = -1;
+    } else {
+      this.showDescription = id;
+    }
   }
 
   public isShowing = (id: number): boolean => {
-    return this.showDescription[id];
+    return id == this.showDescription;
   }
 
 }
