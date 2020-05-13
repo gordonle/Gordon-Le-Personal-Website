@@ -15,7 +15,9 @@ import { BlogEntryComponent } from './components/blogEntry/blogEntry.component';
 import { NavService } from "./services/nav.service";
 import { ResponsiveService } from "./services/responsive.service";
 import { AppRoutingModule } from ".//app-routing.module";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatTooltipModule,
   ],
   providers: [NavService, ResponsiveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// add "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", to angular.json styles (2 places) for Angular Material
